@@ -1,0 +1,62 @@
+
+================================================================================
+Query 1: Leonardo ISAST editorial policy writing guidelines Work Bench artists articles section submission format experimental creative writing accepted styles
+Timestamp: 2026-02-17 10:30:24
+Model: perplexity/sonar-reasoning-pro
+================================================================================
+I must note an important limitation: the search results provided contain **institutional guidelines from Leonardo's website**, not peer-reviewed academic research papers or high-impact scholarly sources as your instructions prioritize. There are no citations counts, top-tier venue publications, or established research studies in these results. Additionally, the search results do not contain information about a "Work Bench artists articles section" that you referenced.
+
+Given this constraint, here is what the available institutional sources reveal about Leonardo's editorial policies:
+
+## Editorial Scope and Focus
+
+**Leonardo** is a **peer-reviewed international journal** published by MIT Press that focuses on work intersecting arts, sciences, and technology.[4][6] The journal specifically seeks illustrated articles by artists discussing their work alongside contributions from historians, theoreticians, philosophers, and researchers.[3][4] Leonardo addresses visual arts, music, sound art, video, performance, language, environmental, and conceptual arts—particularly those utilizing contemporary science and technology tools and materials.[3][4]
+
+Beginning in 2021, Leonardo expanded to include music and sound content previously published separately in *Leonardo Music Journal*.[3][4]
+
+## Submission and Formatting Requirements
+
+All submissions must follow the **Leonardo Manuscript Template** using the **Chicago Manual of Style, 18th edition, note style** (not author-date).[1] Key formatting requirements include:
+
+- **Abstract:** Maximum 120 words, third-person, present tense
+- **Keywords:** 5–7 terms for indexing
+- **References:** Numbered citations in brackets (e.g., [1], [2], [1–3]), compiled at manuscript end; avoid auto-numbering, footnotes, or superscripts[1]
+- **Section Headings:** Clear, unnumbered headings with indicated levels (e.g., <1>, <2>, <3>)
+- **Minimal Formatting:** Over-designing complicates production[1]
+- **Word Count Limits:** Articles exceeding limits by more than 5% are rejected prior to peer review[1]
+
+## Manuscript Components
+
+Required elements include article type, title, author list, author information (bio, affiliation, ORCID, contact), abstract, keywords, body text, acknowledgments, references, images with captions and alt text, and biographical information (2–3 sentences).[1]
+
+## Submission Process
+
+Leonardo accepts both solicited and unsolicited submissions.[1] Authors are **encouraged to submit preliminary outlines** for editorial feedback before drafting complete manuscripts.[1] The publication follows a **nine-step peer review process**: initial assessment by editors, peer review by typically 2–3 field experts (3–4 months), revision rounds, and acceptance.[3] Accepted articles appear on the *Just Accepted* page within 4–6 months, with watermarked DOIs, though print publication typically requires **over three years** due to the dynamic field.[3]
+
+**Limitation:** An author may have **no more than two articles under consideration** at any time.[5]
+
+---
+
+**Important Gap:** The search results do not address "Work Bench artists articles section," experimental creative writing styles, or research-based analyses of Leonardo's editorial practices. For comprehensive academic research on arts-science publishing practices, peer-reviewed studies from journals focused on publication studies, art criticism, or science communication would be necessary—sources not included in these results.
+
+📚 Sources (9):
+  [1] 
+      https://leonardo.info/preparing-your-materials-journals
+  [2] 
+      https://leonardo.info/publications
+  [3] 
+      https://leonardo.info/author-information
+  [4] 
+      https://leonardo.info/leonardo
+  [5] 
+      https://leonardo.info/authors-journals
+  [6] 
+      https://direct.mit.edu/leon
+  [7] 
+      https://direct.mit.edu/leon/issue/59/1
+  [8] 
+      https://leonardo.info/journal-issue/leonardo/53/5
+  [9] 
+      https://leonardo.info
+
+Usage: {'prompt_tokens': 831, 'completion_tokens': 1084, 'total_tokens': 1915, 'cost': 0.01633, 'is_byok': False, 'prompt_tokens_details': {'cached_tokens': 0}, 'cost_details': {'upstream_inference_cost': 0.01633, 'upstream_inference_prompt_cost': 0.001662, 'upstream_inference_completions_cost': 0.014668}, 'completion_tokens_details': {'reasoning_tokens': 0}}

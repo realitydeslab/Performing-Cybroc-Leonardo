@@ -1,276 +1,240 @@
 %%
-%% This is file `sample-manuscript.tex',
-%% generated with the docstrip utility.
-%%
-%% The original source files were:
-%%
-%% samples.dtx  (with options: `manuscript')
-%% 
-%% IMPORTANT NOTICE:
-%% 
-%% For the copyright see the source file.
-%% 
-%% Any modified versions of this file must be renamed
-%% with new filenames distinct from sample-manuscript.tex.
-%% 
-%% For distribution of the original source see the terms
-%% for copying and modification in the file samples.dtx.
-%% 
-%% This generated file may be distributed as long as the
-%% original source files, as listed above, are part of the
-%% same distribution. (The sources need not necessarily be
-%% in the same archive or directory.)
-%%
-%% Commands for TeXCount
-%TC:macro \cite [option:text,text]
-%TC:macro \citep [option:text,text]
-%TC:macro \citet [option:text,text]
-%TC:envir table 0 1
-%TC:envir table* 0 1
-%TC:envir tabular [ignore] word
-%TC:envir displaymath 0 word
-%TC:envir math 0 word
-%TC:envir comment 0 0
-%%
-%%
-%% The first command in your LaTeX source must be the \documentclass command.
-%\documentclass[sigconf,review,anonymous]{acmart}
-%\documentclass[manuscript,review,anonymous]{acmart}
-%\documentclass[manuscript,review,anonymous]{acmart}
-\documentclass[manuscript,review]{acmart}
-
-
-
-% \usepackage[vskip=1em,font=itshape,leftmargin=2em,rightmargin=2em]{quoting}
-
-%%
-%% \BibTeX command to typeset BibTeX logo in the docs
-% \AtBeginDocument{%
-%   \providecommand\BibTeX{{%
-%     \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
-
-%% Rights management information.  This information is sent to you
-%% when you complete the rights form.  These commands have SAMPLE
-%% values in them; it is your responsibility as an author to replace
-%% the commands and values with those provided to you when you
-%% complete the rights form.
-% \copyrightyear{2024}
-% \acmYear{2024}
-% \setcopyright{rightsretained}
-% \acmConference[Conference acronym 'XX]{Make sure to enter the correct
-%   conference title from your rights confirmation emai}{June 03--05,
-%   2018}{Woodstock, NY}
-% \acmISBN{978-1-4503-XXXX-X/18/06}
-
-%% These commands are for a PROCEEDINGS abstract or paper.
-% \acmConference[Conference acronym 'XX]{Make sure to enter the correct
-%   conference title from your rights confirmation emai}{June 03--05,
-%   2018}{Woodstock, NY}
-% \acmISBN{978-1-4503-XXXX-X/18/06}
-
-
-%%
-%% Submission ID.
-%% Use this when submitting an article to a sponsored event. You'll
-%% receive a unique submission ID from the organizers
-%% of the event, and this ID should be used as the parameter to this command.
-%%\acmSubmissionID{123-A56-BU3}
-
-%%
-%% For managing citations, it is recommended to use bibliography
-%% files in BibTeX format.
-%%
-%% You can then either use BibTeX with the ACM-Reference-Format style,
-%% or BibLaTeX with the acmnumeric or acmauthoryear sytles, that include
-%% support for advanced citation of software artifact from the
-%% biblatex-software package, also separately available on CTAN.
-%%
-%% Look at the sample-*-biblatex.tex files for templates showcasing
-%% the biblatex styles.
+%% "Don't Die!": Performing Cybroc
+%% Target: Leonardo (MIT Press) — Work Bench section
+%% Chicago Manual of Style, 18th edition, note style
 %%
 
-%%
-%% The majority of ACM publications use numbered citations and
-%% references.  The command \citestyle{authoryear} switches to the
-%% "author year" style.
-%%
-%% If you are preparing content for an event
-%% sponsored by ACM SIGGRAPH, you must use the "author year" style of
-%% citations and references.
-%% Uncommenting
-%% the next command will enable that style.
-%%\citestyle{acmauthoryear}
+\documentclass[12pt]{article}
 
-%%
-%% end of the preamble, the start of the body of the document source.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{url}
+\usepackage{float}
 
-
+\doublespacing
 
 \begin{document}
 
-%%
-%% The "title" command has an optional parameter,
-%% allowing the author to define a "short title" to be used in page headers.
-% \title{Mixed Reality Street Play: Towards a Playful City with Ubiquitous Mixed Reality Head-Mounted Display}
+% ============================================================
+% TITLE AND METADATA
+% ============================================================
 
-\title{"Don't Die!": Performing Cybroc}
-
-% Synchronous Asymmetric
-
-%%
-%% The "author" command and its associated commands are used to define
-%% the authors and their affiliations.
-%% Of note is the shared affiliation of the first two authors, and the
-%% "author note" and "authornotemark" commands
-%% used to denote shared contribution to the research.
-
-\author{Ke Huang}
-\orcid{0009-0000-6884-9076}
-\affiliation{%    
-    \institution{China Academy of Art}
-    \city{Hangzhou}
-    \country{China}
+\begin{center}
+{\LARGE\bfseries ``Don't Die!'': Performing Cybroc}\\[12pt]
+{\large Ke Huang$^{1,2}$ and Botao Amber Hu$^{3,4}$*}\\[8pt]
+{\small
+$^1$China Academy of Art, Hangzhou, China\\
+$^2$Tsinghua University, Beijing, China\\
+$^3$Reality Design Lab, New York City, USA\\
+$^4$University of Oxford, Oxford, UK\\[4pt]
+*Corresponding author: botao@reality.design
 }
-\affiliation{
-    \institution{Tsinghua University}
-    \city{Beijing}
-    \country{China}
-}
-\email{kehuang81@gmail.com}
+\end{center}
 
-\author{Botao Amber Hu}\authornote{Corresponding author}
-\orcid{0000-0002-4504-0941}
-\affiliation{%
-  \institution{Reality Design Lab}
-  \city{New York City}
-  \country{USA}
-  }
-\affiliation{%
-  \institution{University of Oxford}
-  \city{Oxford}
-  \country{UK}
-  }
-\email{botao@reality.design}
+\vspace{1em}
 
+% ============================================================
+% ABSTRACT (max 120 words, third person, present tense)
+% ============================================================
 
-%%
-%% By default, the full list of authors will be used in the page
-%% headers. Often, this list is too long, and will overlap
-%% other information printed in the page headers. This command allows
-%% the author to define a more concise list
-%% of authors' names for this purpose.
-% \renewcommand{\shortauthors}{Botao Amber Hu et al}
+\noindent\textbf{Abstract:}
+This paper documents \textit{Cybroc}, a bio-art installation presented at the Artificial Life Conference 2025 in Kyoto. Kinetic broccoli cyborgs perform longevity exercises---treadmill running, cold plunges, stretching---derived from tech entrepreneur Bryan Johnson's ``Blueprint'' anti-aging protocol. Over three exhibition days the broccoli rots while the machines continue. The work is simultaneously live-streamed, earning real donations that fund a Kaiseki dinner for the artists. \textit{Cybroc} asks whether the pursuit of radical life extension through protocolized self-optimization constitutes living or merely performing the appearance of living, and what is lost when mortality becomes a problem to be solved rather than a condition to be inhabited.
 
-%%
-%% The abstract is a short summary of the work to be presented in the
-%% article.
-\begin{abstract}
+\vspace{0.5em}
+\noindent\textbf{Keywords:} bio-art, artificial life, transhumanism, longevity culture, live-streaming, wabi-sabi, kinetic art
 
-\end{abstract}
+\vspace{2em}
 
-%% The code below is generated by the tool at http://dl.acm.org/ccs.cfm.
-%% Please copy and paste the code instead of the example below.
-%%
-\begin{CCSXML}
-<ccs2012>
-<concept>
-  <concept_id>10003120.10003123.10011758</concept_id>
-  <concept_desc>Human-centered computing~Interaction design theory, concepts and paradigms</concept_desc>
-  <concept_significance>100</concept_significance>
-</concept>
-<concept>
-  <concept_id>10003120.10003121.10003124.10010392</concept_id>
-  <concept_desc>Human-centered computing~Mixed / augmented reality</concept_desc>
-  <concept_significance>500</concept_significance>
-</concept>
-<concept>
-<concept_id>10003120.10003130.10003233</concept_id>
-<concept_desc>Human-centered computing~Collaborative and social computing systems and tools</concept_desc>
-<concept_significance>100</concept_significance>
-</concept>
-</ccs2012>
-\end{CCSXML}
+% ============================================================
+% BRYAN JOHNSON AND THE "DON'T DIE" MOVEMENT
+% ============================================================
 
-\ccsdesc[100]{Human-centered computing~Interaction design theory, concepts and paradigms}
-\ccsdesc[500]{Human-centered computing~Mixed / augmented reality}
-\ccsdesc[100]{Human-centered computing~Collaborative and social computing systems and tools}
+\section*{Don't Die}
 
-%%
-%% Keywords. The author(s) should pick words that accurately describe
-%% the work being presented. Separate the keywords with commas.
-\keywords{}
+In 2021, Bryan Johnson, the tech entrepreneur who sold the payment platform Braintree to PayPal for \$800 million, launched a personal anti-aging regimen he calls ``Blueprint.'' He reportedly spends over \$2 million per year on the project. He employs more than thirty physicians. He tracks over a thousand biomarkers. He follows a strict 1,977-calorie vegan diet---heavy on vegetables, including broccoli---supplemented by over a hundred daily pills. He exercises according to a precise daily protocol: treadmill running, stretching, cold exposure. He claims to have the heart of a 37-year-old, the skin of a 28-year-old, and the lung capacity of an 18-year-old. He says he is slowly reverse-aging [1].
 
-% \received{21 February 2024}
-% \received[revised]{21 February 2024}
-% \received[accepted]{21 February 2024}
+But Blueprint is more than a health regimen. Johnson has declared that ``Don't Die is the next major ideology for the human race, on par with democracy, capitalism, socialism, Islam, Christianity'' [1]. He genuinely believes that we are the first generation of humans who do not have to die---that technological acceleration has brought us to what the biogerontologist Aubrey de Grey calls ``longevity escape velocity'' [2], the point at which life expectancy increases faster than time passes. For Johnson, death is not a philosophical condition. It is an engineering problem. And he believes the solution is already underway.
 
-\begin{teaserfigure}
-    \centering
-    \Description{}
-    \label{fig:teaser}
-\end{teaserfigure}
+The claim is worth taking seriously---not because it is likely true, but because of what it proposes to replace. Every human civilization has produced a cosmology of death. The Egyptians mummified their pharaohs. The Epic of Gilgamesh, the oldest surviving narrative, is a story about the failure to achieve immortality. Christianity promises resurrection. Buddhism teaches reincarnation and the cessation of suffering through enlightenment. Islam describes paradise. Ernest Becker argued in \textit{The Denial of Death} that all of human culture---art, religion, war, love---is fundamentally a defense against the terror of mortality [3]. For thousands of years, the answer to death has been meaning: the afterlife, the cycle of rebirth, the legacy of works, the continuation of the species. Johnson's proposal is different. He does not offer meaning in the face of death. He proposes to eliminate death altogether. ``Don't Die'' is not a cosmology of the afterlife. It is the abolition of the need for one.
 
-%%
-%% This command processes the author and affiliation and title
-%% information and builds the first part of the formatted document.
-\maketitle
+The idea has attracted a large following. Johnson's YouTube channel, social media presence, and the Netflix documentary \textit{Don't Die} (2025) have turned his daily protocol into a cultural phenomenon. Blueprint has become something like a Schelling point---a coordination signal for people who share an intuition that aging is optional, that the body is a system to be optimized, and that the right combination of data, discipline, and technology can defeat mortality. It is part health movement, part tech ideology, part something that Lena Rifai has identified as ``a form of this-worldly salvation'' rooted in ``Protestant privilege'' [4]---a secular religion for the Silicon Valley class that can afford to practice it.
 
+No peer-reviewed academic analysis of Johnson as a cultural phenomenon yet exists. The critiques are journalistic: the American Council on Science and Health has noted that his results constitute ``the lowest level of scientific evidence''---anecdotal, with no way to isolate which interventions produce effects [5]. What is missing is an examination of what Johnson \textit{means}---not biomedically, but culturally. What does it mean to organize an entire life around not dying? What is gained? What is lost?
 
-\section{Introduction}
+That is what we tried to make.
 
-\section{Background}
+\vspace{1em}
 
-\subsection{Longevity Movement and Transhumanism}
+% ============================================================
+% THE ARTWORK
+% ============================================================
 
-<Prompt>: talk about Bryan Johnson, Longevity Movement
-<Prompt>: big background of Transhumanism
+\section*{Cybroc}
 
+We created \textit{Cybroc} for the Artificial Life Conference 2025 in Kyoto, Japan. The piece is simple to describe: we built small kinetic creatures out of fresh broccoli and hobby electronics---servo motors, 3D-printed brackets, Arduino microcontrollers---and programmed them to perform Bryan Johnson's daily exercise routine. One broccoli runs on a miniature treadmill. Another does stretching exercises, bending its floret arm at regular intervals. A third performs cold plunges, dipping into and rising from a basin of ice water every forty-five seconds.
 
-\subsection{Performing Economy and Memetics}
+We bought the broccoli at a market in Kyoto the morning before the conference opened. Six heads, chosen for the structural integrity of their crowns---the firmness of florets that could support the armatures. We carried them through the summer heat in plastic bags, already aware that the clock had started. Broccoli, severed from its root system, begins dying the moment it is harvested. We were building cyborgs from corpses.
 
-\subsubsection{Meme spreading and Capitalism}
-<Prompt>: talk about How Bryan Johnson Utilize the Meme spreading to make it a movement 
+We attached the machines with cable ties and hot glue. The materials were deliberately cheap. This is not the meticulous bio-art of the Tissue Culture \& Art Project, who grow semi-living sculptures on polymer scaffolds in bioreactors [6]. This is not Eduardo Kac's transgenic art, produced in genetic laboratories [7]. This is not George Gessert's genetic art, involving years of careful plant hybridization [8]. This is grocery vegetables and toy robotics. The crudeness is the point. We wanted to strip the longevity fantasy down to its mechanical skeleton: a body, following a protocol, regardless of whether any of it works.
 
-\subsubsection{Live Streaming and Memecoin}
-<Prompt>: talk about How Bryan Johnson Utilize the Meme spreading to make it a movement 
+The Artificial Life Conference was a deliberate context. The field descends from Christopher Langton's foundational distinction between ``life-as-we-know-it'' and ``life-as-it-could-be'' [9]---the idea that the principles of living systems might be substrate-independent, implementable in silicon as readily as in carbon. The conference studies emergent behavior, evolutionary computation, self-organizing systems. It is interested in what makes things alive. We brought something that was dying. Greenfield and Cao have argued that ALife research has ``privileged emergence, growth, and self-organization while largely avoiding decay and death,'' identifying what they call a ``decay taboo'' [10]. We wanted to put decay on the table. Literally.
 
+The broccoli was installed in the exhibition hall. The machines ran. The exercises began.
 
+\vspace{1em}
 
-\subsection{Cybroc: }
-What's Cybroc?
+% ============================================================
+% THREE DAYS
+% ============================================================
 
-\section{Performing Cybroc}
-The Process 
+\section*{Three Days}
 
-\section{Discussion}
+\textbf{Day 1.} The broccoli was fresh. The treadmill broccoli shuffled forward on its belt, propelled by a servo that rocked its crown in a parody of running form. The stretching broccoli extended and retracted a floret arm with mechanical regularity. The cold-plunge broccoli dipped and rose from its basin of ice water. Conference attendees stopped to watch. Some laughed. Some took photographs. Some asked, sincerely, whether the broccoli was ``alive'' in the artificial life sense---whether its mechanical movements constituted a form of behavior that could be analyzed through the conference's frameworks. We said: it depends on when you ask. Today it is fresh. Tomorrow it will smell. Ask us then whether the behavior is the same.
 
-\subsection{Performing Satire}
-\subsection{Nature vs Artificial Life}
-\subsection{Ethical Dilemma}
+\textbf{Day 2.} The broccoli had begun to yellow at the floret tips. The cold-plunge broccoli, repeatedly wetted and exposed to air, showed the first signs of mold---white filaments at the stem base, visible to anyone who leaned close. A faint smell---not yet unpleasant, but present---indicated cellular breakdown. The machines continued their programmed routines regardless. One attendee remarked that the piece reminded her of Sun Yuan and Peng Yu's \textit{Can't Help Myself} (2016)---the Guggenheim's robotic arm endlessly sweeping a blood-like fluid that keeps spreading [11]. She was right. Both works stage the same confrontation: the machine keeps going, the material does not cooperate.
 
+\textbf{Day 3.} The broccoli on the treadmill had collapsed into itself, its crown sagging over the belt. The stretching broccoli had lost structural integrity at the joint where the armature gripped it; the servo continued to push, but the floret bent at angles the mechanism had not anticipated. The cold-plunge broccoli was dark brown, slick with bacterial film, the mold clearly visible. The smell filled the exhibition space. The machines continued. The belt turned. The arm extended. The plunge descended.
 
-\section{Conclusion}
+Here is the twist, if it is not already obvious: the broccoli was always going to rot. Severed from its root system, it began dying the moment it was harvested. No amount of exercise changes this. The protocol is indifferent to the organism. The algorithm runs whether or not anyone is alive to benefit from it.
 
+This is what we wanted the work to say.
 
+\vspace{1em}
 
+% ============================================================
+% THE QUESTION
+% ============================================================
 
+\section*{The Question}
 
+\textit{Cybroc} asks a question that we do not pretend to answer: What do you want your life to be?
 
+A natural life of roughly eighty years, with all its imperfection, decline, and eventual ending? Or an augmented, mechanically protocolized life of a hundred years or more---every meal measured, every biomarker tracked, every hour optimized---in pursuit of a longevity that may or may not arrive? Or Johnson's ultimate vision: never dying at all?
 
+The question is not only personal. It is cosmological. For most of human history, the fact of death organized everything else---religion, art, ethics, love, the structure of a meaningful life. If death is eliminated, or even indefinitely postponed, what happens to all the systems that were built to make sense of it? What happens to the afterlife when no one needs one? What happens to the Buddhist teaching of impermanence when impermanence is treated as a bug to be patched? What happens to tragedy, to elegy, to the entire aesthetic tradition that draws its power from the knowledge that things end?
 
-%%
-%% The next two lines define the bibliography style to be used, and
-%% the bibliography file.
-\bibliographystyle{ACM-Reference-Format}
-\bibliography{reference}
+We exhibited in Kyoto, and this matters. Kyoto is the historical center of wabi-sabi---what Leonard Koren defines as the beauty of things ``imperfect, impermanent, and incomplete'' [12]. Its philosophical roots lie in the Buddhist concept of \textit{muj\={o}}, impermanence. Kenk\={o}'s medieval \textit{Essays in Idleness} captures the sensibility: ``Branches about to blossom or gardens strewn with faded flowers are worthier of our admiration.'' Japanese aesthetic tradition offers a complete alternative framework for relating to mortality---not as a problem to be solved but as the condition that makes beauty possible.
 
-%%
-%% If your work has an appendix, this is the place to put it.
-\appendix
-%\input{09appendix.tex}
+Johnson's Blueprint and wabi-sabi are diametrically opposed responses to the same fact. You will die. One says: fight it with everything you have. The other says: attend to it. The broccoli's three-day decay, exhibited in the city that perfected the aesthetics of impermanence, holds both responses in view without choosing between them.
 
+The art-historical lineage of decay-as-medium is long. Dieter Roth built sculptures from chocolate and cheese that transformed irreversibly through exhibition [13]. Sam Taylor-Johnson's \textit{Still Life} (2001) time-lapsed fruit decomposition, referencing Dutch vanitas painting [14]. What \textit{Cybroc} adds is the collision of decay with optimization. The broccoli does not simply rot. It rots \textit{while exercising}. This is what we call a ``techno-vanitas''---a memento mori for the optimization age. The classical vanitas placed a skull beside symbols of worldly pleasure. We placed a rotting vegetable beside the machinery of perpetual self-improvement. The message is structurally identical across four centuries: \textbf{you will die regardless.}
+
+\vspace{1em}
+
+% ============================================================
+% THE STREAM
+% ============================================================
+
+\section*{The Stream}
+
+We also live-streamed the entire installation. A camera, a ring light, a laptop. Donations were enabled. This was part of the work from the beginning: we were mimicking not only Johnson's exercise protocol but his media presence. Blueprint exists as content. Johnson's anti-aging routine circulates on YouTube, Instagram, TikTok. The protocol is inseparable from its performance for an audience. We performed it too, except our performer was a vegetable.
+
+The stream attracted viewers. Some found it amusing, some hypnotic, some confusing. The chat filled with messages: ``go broccoli go.'' ``Don't die lol.'' ``This is the content I subscribe for.'' People donated small amounts. A dollar here, five dollars there. The money accumulated. By the second day, the donations were coming in steadily---not despite the broccoli's decay, but because of it. People were paying to watch vegetables rot while performing longevity exercises.
+
+We had planned from the start to use whatever money the stream earned to fund a Kaiseki dinner. Kaiseki is traditional multi-course Japanese haute cuisine rooted in Zen temple cooking, structured around the principle of \textit{ichigo ichie}---``one time, one meeting,'' the conviction that each gathering is unrepeatable and therefore precious precisely because it will never happen again. Each course is a temporary composition: beautiful, consumed, gone.
+
+On the final evening, we went to a restaurant in the Gion district, a narrow street lined with wooden machiya townhouses. The courses arrived in sequence: clear dashi with a single shiso leaf floating on the surface, grilled ayu fish with its skeleton arched as though still swimming, a ceramic dish of seasonal vegetables arranged with asymmetric precision. We ate with the money the broccoli had earned. Every bite was funded by the spectacle of vegetables failing to not die. The loop closed: attention $\rightarrow$ donation $\rightarrow$ spectacle $\rightarrow$ decay $\rightarrow$ capital $\rightarrow$ consumption $\rightarrow$ disappearance.
+
+This loop is the work's second argument, and it is about capitalism. Johnson's ``Don't Die'' movement is not only an ideology of health; it is a commodity. Blueprint supplements are for sale. The content generates revenue. The anti-aging protocol is also, simultaneously, a business. Our live-stream collapsed the distance between the wellness performance and the economic extraction it enables. The broccoli earned real money by performing fake exercises while genuinely dying. If that is not a portrait of the attention economy, we are not sure what is.
+
+Neil Postman warned in 1985 that public discourse was being transformed into entertainment---that the danger was not Orwell's boot on the face but Huxley's pleasure principle, a world in which ``people will come to love their oppression, to adore the technologies that undo their capacities to think'' [15]. Postman was writing about television. But his framework maps onto wellness culture with uncanny precision. Johnson's biomarker data, divorced from clinical context, becomes spectacle. His morning routine is content. His longevity is entertainment. And we are, all of us, amusing ourselves to not-death.
+
+\vspace{1em}
+
+% ============================================================
+% SOME CRITIQUES
+% ============================================================
+
+\section*{Some Critiques}
+
+We are aware that the work raises questions it does not resolve. We offer them honestly.
+
+\textbf{On transhumanism.} Johnson's project belongs to a broader intellectual movement. Transhumanism---the belief that technology can and should transcend the limitations of the human body---has its serious advocates. Nick Bostrom has argued for a ``posthuman dignity'' in which radical enhancement is a moral right [16]. Francis Fukuyama has countered that biotechnology threatens the foundation of liberal democracy, which rests on a shared human nature [17]. Michael Hauskeller argues that transhumanism operates less through rational argument than through ``mythological narrative structures''---stories of transcendence dressed in the language of science [18]. Johnson's project, with its messianic language, its ritual daily protocols, and its community of followers, exemplifies all three positions at once: it is a rights claim, a threat to shared humanity, and a myth. The broccoli does not resolve this debate. It stages it as slapstick. The ritual continues. The salvation does not arrive.
+
+\textbf{On cosmologies.} Every civilization has produced an answer to death. Christianity promises resurrection. Buddhism teaches the cessation of suffering through enlightenment. Islam describes paradise. The ancient Egyptians built pyramids. The question ``Don't Die'' poses is: what if you do not need an answer? What if you simply refuse the question? This is genuinely new. For thousands of years, the response to mortality was meaning---the afterlife, reincarnation, the continuation of the species, the legacy of works. Johnson proposes to replace all of it with engineering. But if Becker is right that all culture is a defense against the terror of death [3], then eliminating death does not liberate us from that terror. It eliminates the culture. The broccoli, rotting on its treadmill in Kyoto---the city of Zen temples, tea ceremony, the aesthetics of impermanence---holds this tension without resolving it. One tradition says: attend to your mortality, and find beauty in it. Another says: don't die. We built an artwork that does both simultaneously, and neither convincingly.
+
+\textbf{On natural life and artificial life.} The Artificial Life conference asks what it means to be alive. We found ourselves asking a different version of the same question: is Johnson's protocolized existence still a \textit{natural} life? He eats, sleeps, and exercises---all biological activities---but every parameter is dictated by algorithms, data, and a team of physicians. The boundary between natural and artificial blurs. The broccoli is the perfect embodiment of this blur: a natural organism performing artificial movements, a living thing that is also a machine, a creature whose ``behavior'' is entirely imposed from outside. Michael Marder argues that plants possess their own temporality and ``material knowledge,'' their own mode of being in the world [19]. We overrode that mode. We imposed a human protocol on a vegetal body. In doing so, we did to the broccoli exactly what Johnson does to himself: we replaced its natural life with an artificial one. The difference is that the broccoli did not volunteer.
+
+\textbf{On complicity.} We earned money from the stream. The donations funded our dinner. We consumed the product of the spectacle we constructed. The closed loop implicates us. We are not outside the system we critique. Byung-Chul Han writes that late-capitalist citizens have become ``achievement-subjects'' who practice ``auto-exploitation more efficient than allo-exploitation, for the feeling of freedom attends it'' [20]. We, too, are achievement-subjects. We made an artwork about the absurdity of optimization culture and then optimized the economic output of that artwork into a luxury meal. Perhaps this is the most honest thing the work does: it refuses to pretend that critique is free.
+
+\textbf{On ableism.} Alison Kafer's concept of the ``curative imaginary'' describes an orientation that ``cannot imagine or comprehend anything other than intervention'' [21]. When aging itself becomes the disability to be cured, everyone who ages---which is everyone---is by definition failing. The broccoli's decay is not a failure. It is what broccoli does. The question is whether we can still say the same about ourselves.
+
+Of course, there is no standard answer for how people should relate to their own mortality. That is not what art is for. \textit{Cybroc} does not argue that longevity research is wrong or that Johnson is a villain. It asks what happens when the pursuit of not-dying becomes the organizing principle of a life. It asks what is lost. It holds up a rotting vegetable on a treadmill and says: look.
+
+\vspace{1em}
+
+% ============================================================
+% CLOSING
+% ============================================================
+
+\section*{}
+
+We threw the broccoli away. We ate the Kaiseki. We wrote this paper.
+
+Don't die, the broccoli said.
+
+But it did.
+
+\vspace{2em}
+
+% ============================================================
+% REFERENCES
+% ============================================================
+
+\section*{References}
+
+\begin{enumerate}[label={[\arabic*]}, leftmargin=*, itemsep=2pt]
+
+\item B. Johnson, ``The Future Will Be Determined by Those Who Don't Die,'' keynote address, Don't Die Summit, 2024. See also: \textit{Don't Die: The Man Who Wants to Live Forever}, dir. Chris Smith (Netflix, 2025).
+
+\item A. de Grey and M. Rae, \textit{Ending Aging: The Rejuvenation Breakthroughs That Could Reverse Human Aging in Our Lifetime} (New York: St. Martin's Press, 2007).
+
+\item E. Becker, \textit{The Denial of Death} (New York: Free Press, 1973).
+
+\item L. Rifai, ``Whose Techno-Utopia? Power, Privilege, and the Religio-Secular Frameworks of the Contemporary Biohacking Movement,'' \textit{Religion Compass} 16, No. 11--12 (2022): e12451. \texttt{doi:10.1111/rec3.12451}
+
+\item American Council on Science and Health, ``Bryan Johnson's Anti-Aging Quest: A Critical Assessment,'' 2025.
+
+\item O. Catts and I. Zurr, ``Growing Semi-Living Sculptures: The Tissue Culture \& Art Project,'' \textit{Leonardo} 35, No. 4 (2002): 365--370. \texttt{doi:10.1162/002409402760181123}
+
+\item E. Kac, ed., \textit{Signs of Life: Bio Art and Beyond} (Cambridge, MA: MIT Press, 2007).
+
+\item G. Gessert, ``Notes on Genetic Art,'' \textit{Leonardo} 26, No. 3 (1993): 205--211. \texttt{doi:10.2307/1575812}
+
+\item C. G. Langton, ``Artificial Life,'' in \textit{Artificial Life}, ed. C. G. Langton (Redwood City, CA: Addison-Wesley, 1989), 1--47.
+
+\item R. Greenfield and S. Cao, ``The Edge of Life-as-We-Know-It: Aesthetics of Decay within Artificial Life and Art,'' \textit{Technoetic Arts} 19, No. 1--2 (2021): 185--201. \texttt{doi:10.1386/tear\_00062\_1}
+
+\item Sun Yuan and Peng Yu, \textit{Can't Help Myself}, 2016. Robotic arm, metal, rubber, visual-recognition sensors, software, liquid. Solomon R. Guggenheim Museum.
+
+\item L. Koren, \textit{Wabi-Sabi: for Artists, Designers, Poets \& Philosophers} (Point Reyes, CA: Imperfect Publishing, 2008). Originally published 1994.
+
+\item D. Roth, retrospective exhibitions at Schaulager, Basel, 2003. See also: H. Schinzel, ``Should We Reproduce the Beauty of Decay?,'' \textit{Tate Papers} 8 (2007).
+
+\item S. Taylor-Johnson, \textit{Still Life}, 2001. Video, 3 min. 44 sec.
+
+\item N. Postman, \textit{Amusing Ourselves to Death: Public Discourse in the Age of Show Business} (New York: Penguin, 1985).
+
+\item N. Bostrom, ``In Defense of Posthuman Dignity,'' \textit{Bioethics} 19, No. 3 (2005): 202--214. \texttt{doi:10.1111/j.1467-8519.2005.00437.x}
+
+\item F. Fukuyama, \textit{Our Posthuman Future: Consequences of the Biotechnology Revolution} (New York: Farrar, Straus and Giroux, 2002).
+
+\item M. Hauskeller, \textit{Mythologies of Transhumanism} (Cham: Palgrave Macmillan, 2016). \texttt{doi:10.1007/978-3-319-39741-2}
+
+\item M. Marder, \textit{Plant-Thinking: A Philosophy of Vegetal Life} (New York: Columbia University Press, 2013). \texttt{doi:10.7312/mard16124}
+
+\item B.-C. Han, \textit{The Burnout Society}, trans. E. Butler (Stanford, CA: Stanford University Press, 2015). \texttt{doi:10.1515/9780804797504}
+
+\item A. Kafer, \textit{Feminist, Queer, Crip} (Bloomington, IN: Indiana University Press, 2013).
+
+\end{enumerate}
 
 \end{document}
-\endinput
-%%
-%% End of file `sample-manuscript.tex'.
