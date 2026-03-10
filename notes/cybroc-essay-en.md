@@ -1,7 +1,9 @@
-# "Don't Die!": Performing Broccoli, Performing Ourselves
+# "Don't Die!": Performing Cybroc
 
 *English translation of Amber's Chinese draft — March 2026*
 *Translator: Biber*
+
+**Key reference:** Neil Postman, *Amusing Ourselves to Death: Public Discourse in the Age of Show Business* (Viking Penguin, 1985). ISBN: 0670804541.
 
 ---
 
